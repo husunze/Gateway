@@ -1,0 +1,37 @@
+//gcc -g -o my  mysql.c -L/usr/lib/mysql -lmysqlclient -lz   这是编译方式
+
+/*
+int main()
+{
+    char IP[20];
+    char *key;
+    strcpy(IP,"127.0.0.1");
+    printf("%d\n",clean_TrustKey());
+ //   printf("%d\n",key_ip_in("123456","127.0.0.1"));
+ //printf("%d\n",IP_in("172.18.55.247"));
+  //  printf("OK!\n");
+  //  key=IP_find_key(IP);
+  //   printf("OK151\n");
+  //  printf("%s",key);
+  /*  conn=mysql_init(NULL);
+    if(!mysql_real_connect(conn,server,user,password,database,0,NULL,0))
+    {
+        printf("%s\n",mysql_error(conn));
+        exit(1);
+    }
+    if(mysql_query(conn,"show tables"))
+    {
+        printf("%s\n",mysql_error(conn));
+        exit(1);
+    }
+    res=mysql_use_result(conn);
+    printf("Mysql tables in mysql database:\n");
+    while((row=mysql_fetch_row(res))!=NULL)
+    {
+        printf("%s\n",row[0]);
+    }
+    mysql_free_result(res);
+    mysql_close(conn);
+
+}
+*/

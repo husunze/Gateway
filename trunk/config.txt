@@ -1,0 +1,5 @@
+网关中用到的数据结构，基本上都在这
+mymsg:基本消息所用的结构
+IdIpMsg：idIP表对应的数据结构
+type1:type1路径用的结构
+type2:type2路径用的结构
