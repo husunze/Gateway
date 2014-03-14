@@ -42,4 +42,19 @@ struct TypeMsg2
     int type;
 };
 
+/*judge1*/
+struct message
+{
+    char deal_id[MAXDATASIZE];
+    char client_id[MAXDATASIZE];
+    char client_addr[MAXDATASIZE];
+    char source_addr[MAXDATASIZE];
+    char desitination_addr[MAXDATASIZE];
+    char child1_id[MAXDATASIZE];
+    char chlid2_id[MAXDATASIZE];
+    char condition[MAXDATASIZE];
+    char type[MAXDATASIZE];
+};
+
+
 #endif /* CONFIG_H_ */
