@@ -1,0 +1,182 @@
+# depslib dependency file v1.0
+1394507181 source:/home/ubuntu/work/Gateway/trunk/AES_lib.c
+	"AES_lib.h"
+
+1376125689 /home/ubuntu/work/Gateway/trunk/AES_lib.h
+	<string.h>
+	<stdio.h>
+	<stdio.h>
+	"AES_Lib.h"
+
+1394507181 source:/home/ubuntu/work/Gateway/trunk/AESmain.c
+	"AESmain.h"
+
+1376125848 /home/ubuntu/work/Gateway/trunk/AESmain.h
+	<stdio.h>
+	<stdlib.h>
+	"AES_lib.h"
+
+1394588822 source:/home/ubuntu/work/Gateway/trunk/error.c
+	"error.h"
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
+1394347386 /home/ubuntu/work/Gateway/trunk/error.h
+	<stdio.h>
+	<string.h>
+	<sys/types.h>
+	<sys/stat.h>
+	<fcntl.h>
+	<string.h>
+
+1394761274 source:/home/ubuntu/work/Gateway/trunk/main.c
+	<stdio.h>
+	<stdlib.h>
+	<pthread.h>
+	<string.h>
+	"rcv_reg.h"
+	"deal_reg_msg.h"
+	"error.h"
+	"auto_reg.h"
+
+1394597620 source:/home/ubuntu/work/Gateway/trunk/mysql.c
+	<mysql/mysql.h>
+	<stdlib.h>
+	"error.h"
+
+1394760573 source:/home/ubuntu/work/Gateway/trunk/config.c
+	"config.h"
+
+1394719649 /home/ubuntu/work/Gateway/trunk/config.h
+
+1394763173 /home/ubuntu/work/Gateway/trunk/rcv_reg.h
+	<sys/types.h>
+	<sys/msg.h>
+	<sys/ipc.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<errno.h>
+	<netdb.h>
+	<error.h>
+	<unistd.h>
+	"AESmain.h"
+	"mysql.h"
+	"error.h"
+	"config.h"
+
+1376041119 /home/ubuntu/work/Gateway/trunk/mysql.h
+	<mysql/mysql.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"mysql_use.h"
+
+1393937182 /home/ubuntu/work/Gateway/trunk/mysql_use.h
+
+1394760492 /home/ubuntu/work/Gateway/trunk/deal_reg_msg.h
+
+1394507181 source:/home/ubuntu/work/Gateway/trunk/rcvfromterm.c
+	"rcvfromterm.h"
+
+1376041119 /home/ubuntu/work/Gateway/trunk/rcvfromterm.h
+	<sys/types.h>
+	<sys/ipc.h>
+	<sys/msg.h>
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	"config.h"
+
+1394507181 source:/home/ubuntu/work/Gateway/trunk/sendtoterm.c
+	"sendtoterm.h"
+
+1376041119 /home/ubuntu/work/Gateway/trunk/sendtoterm.h
+	<sys/types.h>
+	<sys/ipc.h>
+	<sys/msg.h>
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	"config.h"
+
+1394507181 source:/home/ubuntu/work/Gateway/trunk/getconn.c
+	"getconn.h"
+
+1376041119 /home/ubuntu/work/Gateway/trunk/getconn.h
+	<sys/types.h>
+	<sys/ipc.h>
+	<sys/msg.h>
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	"config.h"
+
+1394763068 /home/ubuntu/work/Gateway/trunk/auto_reg.h
+	<sys/types.h>
+	<sys/ipc.h>
+	<sys/msg.h>
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	<stdio.h>
+	"getconn.h"
+	"rcvfrommsgq.h"
+	"rcvfromterm.h"
+	"sendtype.h"
+	"sendtodb.h"
+	"sendtoterm.h"
+	"gettype.h"
+	"error.h"
+
+1376041119 /home/ubuntu/work/Gateway/trunk/rcvfrommsgq.h
+	<sys/msg.h>
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	"config.h"
+
+1376041119 /home/ubuntu/work/Gateway/trunk/sendtype.h
+	<sys/types.h>
+	<sys/ipc.h>
+	<sys/msg.h>
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	"config.h"
+
+1376041119 /home/ubuntu/work/Gateway/trunk/sendtodb.h
+	<sys/types.h>
+	<sys/ipc.h>
+	<sys/msg.h>
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	"config.h"
+
+1376041119 /home/ubuntu/work/Gateway/trunk/gettype.h
+	<stdio.h>
+	<stdlib.h>
+	"config.h"
+
+1394507181 source:/home/ubuntu/work/Gateway/trunk/rcvfrommsgq.c
+	"rcvfrommsgq.h"
+
+1394507181 source:/home/ubuntu/work/Gateway/trunk/sendtodb.c
+	"sendtodb.h"
+
+1394507181 source:/home/ubuntu/work/Gateway/trunk/sendtype.c
+	"sendtype.h"
+

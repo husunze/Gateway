@@ -1,0 +1,9 @@
+这个是用来生成type路径的
+type1 :void type1(struct TypeMsg1 *msg1, int *num, int len, int type) 
+TypeMsg1:路径表type1
+*num:这个是机器表，连上网关的机器，都会在在个表上
+len:长度，即num的总个数
+type:type编号
+
+void type2(struct TypeMsg2 *msg2, int *num, int len, int type) 
+与上面相同

@@ -14,6 +14,7 @@
 #include<errno.h>
 #include<netdb.h>
 #include<error.h>
+#include<unistd.h>
 #include"AESmain.h"
 #include"mysql.h"
 #include "error.h"

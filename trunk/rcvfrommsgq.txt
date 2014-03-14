@@ -1,0 +1,17 @@
+void rcvfrommsgq(key_t key, long type, char* sqlRes)
+传入:key type sqlRes   
+key:消息队列    sqlidKey    = ftok(".", 'w'); /*获得sqlid队列*/
+type:消息类型
+sqlRes:消息指针
+
+这个地方的消息是sqlid消息
+
+void rcvfrommsgq(key_t key, long type, char* sqlRes)
+传入:key type sqlRes   
+key:消息队列    sqlidKey    = ftok(".", 'p'); /*获得数据库的返回消息队列*/
+type:消息类型
+sqlRes:消息指针
+
+这个地方的消息是数据库返回消息消息
+
+代码重用

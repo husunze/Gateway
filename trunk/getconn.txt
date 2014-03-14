@@ -1,0 +1,5 @@
+int getconn(key_t key, char* ipMsg, char* status)
+函数传入三个东西：key ipmsg status
+key:fromtermkey 前台的注册消息，所放置的消息队列
+ipmsg:1-20这20个位放置的是IP
+status:20-30这十个位，这个是状态，表示的是前台的状态
