@@ -12,6 +12,7 @@
 #define MIN 10
 #define BUF 512
 #define LEN 10
+#define MAXDATASIZE 20
 #define RCV_REG_PORT 9999
 #define RCV_SQL_RES_PORT 7777
 #define DATABASEIP "172.16.15.18"
