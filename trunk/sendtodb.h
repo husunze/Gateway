@@ -1,9 +1,3 @@
-/*
- * sendtodb.h
- *
- *  Created on: 2013年8月9日
- *      Author: oracle
- */
 
 #ifndef SENDTODB_H_
 #define SENDTODB_H_

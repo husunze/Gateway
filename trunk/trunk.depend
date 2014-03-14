@@ -31,7 +31,7 @@
 	<fcntl.h>
 	<string.h>
 
-1394761274 source:/home/ubuntu/work/Gateway/trunk/main.c
+1394773935 source:/home/ubuntu/work/Gateway/trunk/main.c
 	<stdio.h>
 	<stdlib.h>
 	<pthread.h>
@@ -40,6 +40,9 @@
 	"deal_reg_msg.h"
 	"error.h"
 	"auto_reg.h"
+	"CreateSqlid.h"
+	"snd_sql.h"
+	"rcv_sqlRes.h"
 
 1394597620 source:/home/ubuntu/work/Gateway/trunk/mysql.c
 	<mysql/mysql.h>
@@ -49,7 +52,7 @@
 1394760573 source:/home/ubuntu/work/Gateway/trunk/config.c
 	"config.h"
 
-1394719649 /home/ubuntu/work/Gateway/trunk/config.h
+1394773662 /home/ubuntu/work/Gateway/trunk/config.h
 
 1394763173 /home/ubuntu/work/Gateway/trunk/rcv_reg.h
 	<sys/types.h>
@@ -120,7 +123,7 @@
 	<string.h>
 	"config.h"
 
-1394763068 /home/ubuntu/work/Gateway/trunk/auto_reg.h
+1394775126 /home/ubuntu/work/Gateway/trunk/auto_reg.h
 	<sys/types.h>
 	<sys/ipc.h>
 	<sys/msg.h>
@@ -156,7 +159,7 @@
 	<string.h>
 	"config.h"
 
-1376041119 /home/ubuntu/work/Gateway/trunk/sendtodb.h
+1394767145 /home/ubuntu/work/Gateway/trunk/sendtodb.h
 	<sys/types.h>
 	<sys/ipc.h>
 	<sys/msg.h>
@@ -171,7 +174,7 @@
 	<stdlib.h>
 	"config.h"
 
-1394507181 source:/home/ubuntu/work/Gateway/trunk/rcvfrommsgq.c
+1394775907 source:/home/ubuntu/work/Gateway/trunk/rcvfrommsgq.c
 	"rcvfrommsgq.h"
 
 1394507181 source:/home/ubuntu/work/Gateway/trunk/sendtodb.c
@@ -179,4 +182,35 @@
 
 1394507181 source:/home/ubuntu/work/Gateway/trunk/sendtype.c
 	"sendtype.h"
+
+1394507181 source:/home/ubuntu/work/Gateway/trunk/gettype.c
+	"gettype.h"
+
+1394774155 /home/ubuntu/work/Gateway/trunk/CreateSqlid.h
+
+1394777523 /home/ubuntu/work/Gateway/trunk/snd_sql.h
+	<stdio.h>
+	<sys/types.h>
+	<string.h>
+	<stdlib.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<sys/ipc.h>
+	<arpa/inet.h>
+	<sys/msg.h>
+	"config.h"
+
+1394774683 /home/ubuntu/work/Gateway/trunk/rcv_sqlRes.h
+	<sys/types.h>
+	<sys/msg.h>
+	<sys/ipc.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<errno.h>
+	<netdb.h>
+	"config.h"
 

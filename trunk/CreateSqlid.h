@@ -41,7 +41,7 @@ void createsqlid_run(){
         {
             printf("send msg error\n");
         }
-        printf("sqlid=>%s\n",mmsg.buff);
+      //  printf("sqlid=>%s\n",mmsg.buff);
         sleep(1);
     }
 }
