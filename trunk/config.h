@@ -26,6 +26,7 @@ struct mymsg
 };
 /*消息队列结构体 */
 
+
 struct IdIpMsg/*id和ip对应信息表结构*/
 {
     int id; /*机器编号*/
@@ -47,7 +48,7 @@ struct TypeMsg2
     int type;
 };
 
-/*judge1*/
+
 struct message
 {
     char deal_id[MAXDATASIZE];
@@ -59,7 +60,8 @@ struct message
     char chlid2_id[MAXDATASIZE];
     char condition[MAXDATASIZE];
     char type[MAXDATASIZE];
-};
+};/*judge1*/
+
 
 
 #endif /* CONFIG_H_ */
