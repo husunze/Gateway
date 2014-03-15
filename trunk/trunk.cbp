@@ -102,6 +102,7 @@
 		</Unit>
 		<Unit filename="sendtype.h" />
 		<Unit filename="snd_sql.h" />
+		<Unit filename="to_type.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />

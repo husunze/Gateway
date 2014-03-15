@@ -17,6 +17,10 @@
 #define RCV_SQL_RES_PORT 7777
 #define DATABASEIP "172.16.15.18"
 
+#define server "localhost"
+#define user "root"
+#define password "hsz67235690"
+
 #define DATABASEPORT 1234
 
 struct mymsg

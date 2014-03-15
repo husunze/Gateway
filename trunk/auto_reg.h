@@ -262,9 +262,9 @@ void auto_reg_run(){
                     }
                     sqlcount[j] = '\0';
                     idNum[i] = atoi(sqlcount);
-                }/*end of for D */
+                }/*end of for ID */
                 /*根据所有连接在网关上的机器的机器编号生成type表*/
-                /*查询数据库中type1表和type2表type值去大者*/
+                /*查询数据库中type1表和type2表type值大者*/
                 memset(sqlid9, 0, 10);
                 rcvfrommsgq(sqlidKey, 0, sqlRes);
                 log(logname, loglen, sqlRes, strlen(sqlRes));
