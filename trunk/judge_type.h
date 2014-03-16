@@ -1,0 +1,6 @@
+#ifndef JUDGE_TYPE_H_INCLUDED
+#define JUDGE_TYPE_H_INCLUDED
+
+
+
+#endif // JUDGE_TYPE_H_INCLUDED

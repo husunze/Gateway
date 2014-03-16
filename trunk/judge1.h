@@ -14,10 +14,13 @@
 #include<netdb.h>
 #include<error.h>
 #include<unistd.h>
-#include"AESmain.h"
-#include"mysql.h"
+#include "AESmain.h"
+#include "mysql.h"
 #include "error.h"
 #include "config.h"
+
+#define BUFSZ 512
+#define MAXDATASIZE 20
 void judge1_run()
 {
 

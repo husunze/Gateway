@@ -234,10 +234,18 @@
 	<stdlib.h>
 	"AES_lib.h"
 
-1394790624 source:/home/hsz/Desktop/Gateway/trunk/config.c
+1394939382 source:/home/hsz/Desktop/Gateway/trunk/config.c
 	"config.h"
 
-1394852559 /home/hsz/Desktop/Gateway/trunk/config.h
+1394940676 /home/hsz/Desktop/Gateway/trunk/config.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<sys/types.h>
+	<sys/ipc.h>
+	<sys/msg.h>
+	<mysql/mysql.h>
+	<netinet/in.h>
 
 1394871579 source:/home/hsz/Desktop/Gateway/trunk/error.c
 	"error.h"
@@ -275,7 +283,7 @@
 	<stdlib.h>
 	"config.h"
 
-1394790624 source:/home/hsz/Desktop/Gateway/trunk/main.c
+1394940299 source:/home/hsz/Desktop/Gateway/trunk/main.c
 	<stdio.h>
 	<stdlib.h>
 	<pthread.h>
@@ -288,6 +296,16 @@
 	"snd_sql.h"
 	"rcv_sqlRes.h"
 	"to_type.h"
+	"judge1.h"
+	"judge2.h"
+	"to_id.h"
+	"rcv_font.h"
+	"rcvfont.h"
+	"to_monitor.h"
+	"to_back.h"
+	"rcv_back.h"
+	"rcvback.h"
+	"to_font.h"
 
 1394871163 /home/hsz/Desktop/Gateway/trunk/rcv_reg.h
 	<sys/types.h>
@@ -434,4 +452,147 @@
 
 1394790624 source:/home/hsz/Desktop/Gateway/trunk/sendtype.c
 	"sendtype.h"
+
+1394877306 /home/hsz/Desktop/Gateway/trunk/judge1.h
+	<sys/types.h>
+	<sys/msg.h>
+	<sys/ipc.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<errno.h>
+	<netdb.h>
+	<error.h>
+	<unistd.h>
+	"AESmain.h"
+	"mysql.h"
+	"error.h"
+	"config.h"
+
+1394877305 /home/hsz/Desktop/Gateway/trunk/judge2.h
+	<sys/types.h>
+	<sys/msg.h>
+	<sys/ipc.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<errno.h>
+	<netdb.h>
+	<error.h>
+	<unistd.h>
+	"AESmain.h"
+	"mysql.h"
+	"error.h"
+	"config.h"
+
+1394939111 /home/hsz/Desktop/Gateway/trunk/to_id.h
+	<stdio.h>
+	<sys/types.h>
+	<string.h>
+	<stdlib.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<sys/ipc.h>
+	<arpa/inet.h>
+	<sys/msg.h>
+	"error.h"
+	"mysql.h"
+	"AESmain.h"
+	"config.h"
+
+1394937072 /home/hsz/Desktop/Gateway/trunk/rcv_font.h
+	<sys/types.h>
+	<sys/msg.h>
+	<sys/ipc.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<errno.h>
+	<netdb.h>
+	"config.h"
+
+1394877551 /home/hsz/Desktop/Gateway/trunk/rcvfont.h
+	<sys/types.h>
+	<sys/ipc.h>
+	<sys/msg.h>
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	"config.h"
+
+1394940510 /home/hsz/Desktop/Gateway/trunk/to_monitor.h
+	<stdio.h>
+	<sys/types.h>
+	<string.h>
+	<stdlib.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<sys/ipc.h>
+	<arpa/inet.h>
+	<sys/msg.h>
+	"config.h"
+	"error.h"
+
+1394940683 /home/hsz/Desktop/Gateway/trunk/to_back.h
+	<stdio.h>
+	<sys/types.h>
+	<string.h>
+	<stdlib.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<sys/ipc.h>
+	<arpa/inet.h>
+	<sys/msg.h>
+	"mysql.h"
+	"AESmain.h"
+	"config.h"
+
+1394878772 /home/hsz/Desktop/Gateway/trunk/rcv_back.h
+	<sys/types.h>
+	<sys/msg.h>
+	<sys/ipc.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<errno.h>
+	<netdb.h>
+	"AESmain.h"
+	"mysql.h"
+
+1394935570 /home/hsz/Desktop/Gateway/trunk/rcvback.h
+	<sys/types.h>
+	<sys/ipc.h>
+	<sys/msg.h>
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	"config.h"
+
+1394937860 /home/hsz/Desktop/Gateway/trunk/to_font.h
+	<stdio.h>
+	<sys/types.h>
+	<string.h>
+	<stdlib.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<sys/ipc.h>
+	<arpa/inet.h>
+	<sys/msg.h>
+	"mysql.h"
+	"AESmain.h"
+	"config.h"
 

@@ -10,16 +10,14 @@
 #include<sys/ipc.h>
 #include<arpa/inet.h>
 #include<sys/msg.h>
-#include<config.h>
+#include"config.h"
 #include"error.h"
 
 #define MAX  512
 
 
-int socket_fd;
-struct sockaddr_in sockaddr_inServerAddress;
-void sendtowindows(char* data);
-void to_monitor_run()
+
+void to_monitor_run(int argc,char *argv[])
 {
 
     int qid;
@@ -74,7 +72,7 @@ void to_monitor_run()
             printf("_________________________________\n");
         }
           in("minitor 78\n");
-        sendtowindows(pmsg.msg_buf);
+        to_monitor_sendtowindows(pmsg.msg_buf);
           in("minitor 80\n");
         sleep(2);
 
@@ -84,23 +82,6 @@ void to_monitor_run()
 }
 
 
-void sendtowindows(char* data)
-{
 
-    in("monitoe 92\n");
-    if((socket_fd=socket(AF_INET,SOCK_STREAM,0))<0)
-    {
-        in("monitoe 95\n");
-        perror("socket error\n");
-        exit(1);
-    }
-    in("monitoe 99\n");
-    if(connect(socket_fd,(struct sockaddr *)&sockaddr_inServerAddress,sizeof(sockaddr_inServerAddress))!=0)
-    {
-        in("monitoe 102\n");
-        printf("connect error !\n");
-        close(socket_fd);
-        exit(1);
-    }
 
 #endif // TO_MONITOR_H_INCLUDED

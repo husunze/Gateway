@@ -7,8 +7,9 @@
 #include<stdlib.h>
 #include<unistd.h>
 #include<string.h>
-#include "sql.h"
-#include "select_types.h"
+#include"config.h"
+//#include "sql.h"
+//#include "select_types.h"
 
 void rcvfont_run()
 {

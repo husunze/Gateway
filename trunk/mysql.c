@@ -12,6 +12,7 @@
 #include <stdlib.h>
 #include "error.h"
 
+
 #define server "localhost"
 #define user "root"
 #define password "xA123456"

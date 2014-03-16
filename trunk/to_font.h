@@ -14,9 +14,7 @@
 #include "config.h"
 #define MAX  512
 
-int socket_fd;
-struct sockaddr_in sockaddr_inServerAddress;
-void sendtowindows(char* data);
+
 void to_font_run()
 {
 int qid;
@@ -69,67 +67,5 @@ int qid;
     }/*end while*/
     return 0;
 }
-void sendtowindows(char* data)
-{
-    int i=80;
-    char dis[20];
-    char *skey;
-    char in[16];
-    char out[16];
-    int j;
-    for(i; i<=99; i++)
-    {
-        printf("%c",data[i]);
-        if(data[i]!='#')
-        {
-            dis[i-80]=data[i];
-        }
-        else
-        {
-            break;
-        }
-    }
-    dis[i-80]='\0';
-    skey=IP_find_key(dis);
-    printf("key:%s\n",skey);
-    for(i=0;i<32;i++)
-    {
 
-        for(j=0;j<16;j++)
-        {
-            in[j]=data[i*16+j];
-        }
-        encrpt(in,skey,out);
-        for(j=0;j<16;j++)
-        {
-            data[i*16+j]=out[j];
-        }
-    }
-    printf("the distinatino ip is %s",dis);
-    memset(&sockaddr_inServerAddress,0,sizeof(sockaddr_inServerAddress));
-
-    sockaddr_inServerAddress.sin_family=AF_INET;
-    sockaddr_inServerAddress.sin_addr.s_addr=inet_addr(dis);
-    sockaddr_inServerAddress.sin_port=htons(8886);
-
-
-    if((socket_fd=socket(AF_INET,SOCK_STREAM,0))<0)
-    {
-        perror("socket error\n");
-        exit(1);
-    }
-    if(connect(socket_fd,(struct sockaddr *)&sockaddr_inServerAddress,sizeof(sockaddr_inServerAddress))!=0)
-    {
-        printf("connect error !\n");
-        close(socket_fd);
-        exit(1);
-    }
-    if(send(socket_fd,data,strlen(data),0)==-1)
-    {
-        printf("send error!\n");
-        exit(1);
-    }
-    close(socket_fd);
-
-}
 #endif // TO_FONT_H_INCLUDED

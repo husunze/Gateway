@@ -7,8 +7,6 @@
 #include<stdlib.h>
 #include<unistd.h>
 #include<string.h>
-#include "sql.h"
-#include "select_types.h"
 #include "config.h"
 void rcvback_run()
 {
