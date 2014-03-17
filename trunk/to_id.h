@@ -13,12 +13,10 @@
 #include "mysql.h"
 #include "AESmain.h"
 #include "config.h"
-#define MAX  512
 
-void sendtowindows(char* data);
 int socket_fd;
 struct sockaddr_in sockaddr_inServerAddress;
-
+//void sendtowindows(char* data);
 void to_id_run(int argc,char *argv[])
 {
 
@@ -60,14 +58,14 @@ void to_id_run(int argc,char *argv[])
             in("id 53\n");
         }
         printf("get in 65\n");
-        sendtowindows(pmsg.msg_buf);
+        to_id_sendtowindows(pmsg.msg_buf);
         in("id 74\n");
     }/*end while*/
-    return 0;
+    //return 0;
 }
 
 
-void sendtowindows(char* data)
+void to_id_sendtowindows(char* data)
 {
     int i,j;
     char dis[20];
@@ -125,5 +123,6 @@ void sendtowindows(char* data)
     close(socket_fd);
 
 }
+
 
 #endif // TO_ID_H_INCLUDED

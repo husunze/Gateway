@@ -1,26 +1,17 @@
 #ifndef JUDGE1_H_INCLUDED
 #define JUDGE1_H_INCLUDED
-
 #include<sys/types.h>
-#include<sys/msg.h>
 #include<sys/ipc.h>
-#include<sys/socket.h>
-#include<netinet/in.h>
-#include<arpa/inet.h>
+#include<sys/msg.h>
 #include<stdio.h>
 #include<stdlib.h>
-#include<string.h>
-#include<errno.h>
-#include<netdb.h>
-#include<error.h>
 #include<unistd.h>
-#include"AESmain.h"
-#include"mysql.h"
-#include "error.h"
+#include<string.h>
+#include "judge_type.h"
 #include "config.h"
-void judge1_run()
-{
 
+void judge1_run(int argc,char *argv[])
+{
     /* char *type_p[]={"type1###############","type2###############","type3###############","type4###############","type5###############","type6###############","type7###############","type8###############","type9###############","type10##############","type11##############","type12##############"};
      */
     int qid1,qid2,qid3;
@@ -105,6 +96,7 @@ void judge1_run()
     system("ipcs -q");
     exit(0);
 }
+
 
 
 #endif // JUDGE1_H_INCLUDED

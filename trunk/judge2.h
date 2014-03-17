@@ -1,23 +1,12 @@
 #ifndef JUDGE2_H_INCLUDED
 #define JUDGE2_H_INCLUDED
-
-#include<sys/types.h>
-#include<sys/msg.h>
-#include<sys/ipc.h>
-#include<sys/socket.h>
-#include<netinet/in.h>
-#include<arpa/inet.h>
 #include<stdio.h>
 #include<stdlib.h>
-#include<string.h>
-#include<errno.h>
-#include<netdb.h>
-#include<error.h>
 #include<unistd.h>
-#include"AESmain.h"
-#include"mysql.h"
-#include "error.h"
+#include<string.h>
+#include "judge_type.h"
 #include "config.h"
+
 void judge2_run(int argc,char *argv[])
 {
     /*
@@ -114,5 +103,7 @@ void judge2_run(int argc,char *argv[])
     system("ipcs -q");
     exit(0);
 }
+
+
 
 #endif // JUDGE2_H_INCLUDED

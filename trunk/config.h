@@ -16,8 +16,13 @@
 #define RCV_REG_PORT 9999
 #define RCV_SQL_RES_PORT 7777
 #define DATABASEIP "172.16.15.18"
-
 #define DATABASEPORT 1234
+//#define TO_IDMAX  512/*to_id*/
+#define BUFSZ 512
+#define MAXDATASIZE 20/*judge1.h*/
+#define PORTF 8881/*rcv_font.h*/
+#define PORTB 8884/*rcv_back.h*/
+
 
 struct mymsg
 {

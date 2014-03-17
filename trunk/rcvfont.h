@@ -1,5 +1,5 @@
-#ifndef TO_BACK_H_INCLUDED
-#define TO_BACK_H_INCLUDED
+#ifndef RCVFONT_H_INCLUDED
+#define RCVFONT_H_INCLUDED
 #include<stdio.h>
 #include<sys/types.h>
 #include<string.h>
@@ -12,26 +12,32 @@
 #include "mysql.h"
 #include "AESmain.h"
 #include "config.h"
+
 int socket_fd;
 struct sockaddr_in sockaddr_inServerAddress;
-//void to_back_sendtowindows(char* data);
-void to_back_run(int argc,char *argv[])
+//void rcv_font_sendtowindows(char* data);
+void rcvfont_run(int argc,char *argv[])
 {
 
     int qid;
     key_t key;
     int len;
     struct mymsg pmsg;
-    /*
-     	if(argc!=2)
+
+    /* 	if(argc!=3)
     {
     	printf("Usage:\n");
-    	printf("To_back<protnum>\n");
+    	printf("TcpEchoClient.exe <ipaddress><protnum>\n");
     	exit(1);
     }
 
+    memset(&sockaddr_inServerAddress,0,sizeof(sockaddr_inServerAddress));
+
+    sockaddr_inServerAddress.sin_family=AF_INET;
+    sockaddr_inServerAddress.sin_addr.s_addr=inet_addr(argv[1]);
+    sockaddr_inServerAddress.sin_port=htons(atoi(argv[2]));
     */
-    key=ftok(".",'c');
+    key=ftok(".",'f');
     printf("key=%x\n",key);
     if((qid=msgget(key,IPC_CREAT|0666))==-1)
     {
@@ -40,7 +46,7 @@ void to_back_run(int argc,char *argv[])
     }
     printf("qid=%d\n",qid);
 
-    for(;;)
+    while(1)
     {
         len=msgrcv(qid,&pmsg,sizeof(pmsg.msg_buf),0,0);
         if(len<0)
@@ -59,13 +65,11 @@ void to_back_run(int argc,char *argv[])
             printf("i will send a message to windows ,the message is %s\n",pmsg.msg_buf);
             printf("_________________________________\n");
         }
-        to_back_sendtowindows(pmsg.msg_buf);
+        rcv_font_sendtowindows(pmsg.msg_buf);
     }/*end while*/
     //return 0;
 }
-
-
-void to_back_sendtowindows(char* data)
+void rcv_font_sendtowindows(char* data)
 {
     int i=80;
     char dis[20];
@@ -107,6 +111,8 @@ void to_back_sendtowindows(char* data)
     sockaddr_inServerAddress.sin_family=AF_INET;
     sockaddr_inServerAddress.sin_addr.s_addr=inet_addr(dis);
     sockaddr_inServerAddress.sin_port=htons(8886);
+
+
     if((socket_fd=socket(AF_INET,SOCK_STREAM,0))<0)
     {
         perror("socket error\n");
@@ -116,10 +122,12 @@ void to_back_sendtowindows(char* data)
     {
         printf("connect error !\n");
         close(socket_fd);
+        exit(1);
     }
     if(send(socket_fd,data,strlen(data),0)==-1)
     {
         printf("send error!\n");
+        exit(1);
     }
     close(socket_fd);
 
@@ -127,4 +135,4 @@ void to_back_sendtowindows(char* data)
 
 
 
-#endif // TO_BACK_H_INCLUDED
+#endif // RCVFONT_H_INCLUDED
