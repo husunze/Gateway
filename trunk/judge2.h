@@ -18,6 +18,9 @@
 #include"mysql.h"
 #include "error.h"
 #include "config.h"
+
+#define BUFSZ 512
+#define MAXDATASIZE 20
 void judge2_run(int argc,char *argv[])
 {
     /*
@@ -43,7 +46,7 @@ void judge2_run(int argc,char *argv[])
     }
     for(;;)
     {
-        len=msgrcv(qid1,&pmsg,BUFSZ,0,0);
+        len=msgrcv(qid1,&pmsg,BUFSIZ,0,0);
         if(len>0)
         {
             pmsg.msg_buf[len]='\0';

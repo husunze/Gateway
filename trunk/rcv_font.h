@@ -12,14 +12,14 @@
 #include<string.h>
 #include<errno.h>
 #include<netdb.h>
-#include<config.h>
+#include"config.h"
 
 //#include"AESmain.h"
 //#include"mysql.h"
 
 #define PORT 8881
 struct mymsg msg1;
-int main(int argc,char *argv[])
+int rcv_font_run(int argc,char *argv[])
 {
     int iServerActive,iIncomingBytes=1;
     int iSocketFD,iConnectedFD;
@@ -116,7 +116,7 @@ int main(int argc,char *argv[])
             */
             for(i=0;i<512;i++)   //config is buf
                 printf("%c",msg1.msg_buf[i]);
-            msg1.msg_type=1;
+            msg1.msg_types=1;
             printf("key=%x\n",key);
             printf("qid=%d   ssi\n",qid);
             /*strcpy(msg1.mtext,buffer);*/

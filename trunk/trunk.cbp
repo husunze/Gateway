@@ -66,6 +66,9 @@
 		</Unit>
 		<Unit filename="gettype.h" />
 		<Unit filename="gettype.txt" />
+		<Unit filename="judge1.h" />
+		<Unit filename="judge2.h" />
+		<Unit filename="judge_type.h" />
 		<Unit filename="localdb.txt" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
@@ -76,8 +79,12 @@
 		<Unit filename="mysql.h" />
 		<Unit filename="mysql.txt" />
 		<Unit filename="mysql_use.h" />
+		<Unit filename="rcv_back.h" />
+		<Unit filename="rcv_font.h" />
 		<Unit filename="rcv_reg.h" />
 		<Unit filename="rcv_sqlRes.h" />
+		<Unit filename="rcvback.h" />
+		<Unit filename="rcvfont.h" />
 		<Unit filename="rcvfrommsgq.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -102,6 +109,13 @@
 		</Unit>
 		<Unit filename="sendtype.h" />
 		<Unit filename="snd_sql.h" />
+		<Unit filename="to_back.h" />
+		<Unit filename="to_font.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="to_id.h" />
+		<Unit filename="to_monitor.h" />
+		<Unit filename="to_type.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />

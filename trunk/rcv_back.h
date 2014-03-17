@@ -117,7 +117,7 @@ void rcv_back_run()
                 printf("%c",msg1.msg_buf[i]);
             printf("\n");
             printf("%s\n",msg1.msg_buf);
-            msg1.msg_type=1;
+            msg1.msg_types=1;
             printf("key=%x\n",key);
             printf("qid=%d\n",qid);
             /*strcpy(msg1.mtext,buffer);*/

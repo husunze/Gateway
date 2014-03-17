@@ -31,7 +31,7 @@ int in(char ch[]) {
 void log(char *name, int namelen, char *message, int messagelen){
     FILE *fp = NULL;
     char path[300];
-    char *ppath = "./log/";
+    char *ppath = "./";
     time_t rawtime;
     struct tm *timeinfo;
     int pathlen = sizeof(ppath);

@@ -1,5 +1,5 @@
-#ifndef TO_BACK_H_INCLUDED
-#define TO_BACK_H_INCLUDED
+#ifndef TO_FONT_H_INCLUDED
+#define TO_FONT_H_INCLUDED
 #include<stdio.h>
 #include<sys/types.h>
 #include<string.h>
@@ -14,23 +14,28 @@
 #include "config.h"
 #define MAX  512
 
-void to_back_run()
-{
 
-    int qid;
+void to_font_run()
+{
+int qid;
     key_t key;
     int len;
     struct mymsg pmsg;
-    /*
-     	if(argc!=2)
+
+    /* 	if(argc!=3)
     {
     	printf("Usage:\n");
-    	printf("To_back<protnum>\n");
+    	printf("TcpEchoClient.exe <ipaddress><protnum>\n");
     	exit(1);
     }
 
+    memset(&sockaddr_inServerAddress,0,sizeof(sockaddr_inServerAddress));
+
+    sockaddr_inServerAddress.sin_family=AF_INET;
+    sockaddr_inServerAddress.sin_addr.s_addr=inet_addr(argv[1]);
+    sockaddr_inServerAddress.sin_port=htons(atoi(argv[2]));
     */
-    key=ftok(".",'c');
+    key=ftok(".",'f');
     printf("key=%x\n",key);
     if((qid=msgget(key,IPC_CREAT|0666))==-1)
     {
@@ -39,7 +44,7 @@ void to_back_run()
     }
     printf("qid=%d\n",qid);
 
-    for(;;)
+    while(1)
     {
         len=msgrcv(qid,&pmsg,sizeof(pmsg.msg_buf),0,0);
         if(len<0)
@@ -63,7 +68,4 @@ void to_back_run()
     return 0;
 }
 
-
-
-
-#endif // TO_BACK_H_INCLUDED
+#endif // TO_FONT_H_INCLUDED
