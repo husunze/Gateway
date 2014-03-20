@@ -14,7 +14,6 @@
 #include "csh_type_def.h"
 
 void select_type2_byname(char type_name[],struct pathtype* yourtype);
-
 void select_type1_byname(char type_name[],struct pathtype* yourtype);
 
 

@@ -229,7 +229,7 @@
 1395030295 source:/home/hsz/Desktop/Gateway/trunk/AESmain.c
 	"AESmain.h"
 
-1395030295 /home/hsz/Desktop/Gateway/trunk/AESmain.h
+1395038855 /home/hsz/Desktop/Gateway/trunk/AESmain.h
 	<stdio.h>
 	<stdlib.h>
 	"AES_lib.h"
@@ -453,7 +453,7 @@
 
 1395030295 /home/hsz/Desktop/Gateway/trunk/mysql_use.h
 
-1395030295 /home/hsz/Desktop/Gateway/trunk/deal_reg_msg.h
+1395039713 /home/hsz/Desktop/Gateway/trunk/deal_reg_msg.h
 
 1395030295 /home/hsz/Desktop/Gateway/trunk/auto_reg.h
 	<sys/types.h>

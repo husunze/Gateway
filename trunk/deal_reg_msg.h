@@ -84,8 +84,8 @@ void deal_reg_msg_run(){
 
         printf("qid of auto_reg:%d\n",qid2);
         temp.msg_types=1;
-   //     msglen=sizeof(struct mymsg)-4;
-       // count=msgsnd(qid,&msg1,sizeof(msg1.msg_buf),0);
+        //msglen=sizeof(struct mymsg)-4;
+        // count=msgsnd(qid,&msg1,sizeof(msg1.msg_buf),0);
         if(msgsnd(qid2,&temp,sizeof(temp.msg_buf),0)<0)
         {
           //  printf("mssage send error,count=%d!",count);

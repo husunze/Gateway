@@ -78,7 +78,7 @@ void auto_reg_run(){
 
     for ( ; ; )
     {
-        ipMsg  = (char *) malloc(sizeof(char));
+        ipMsg = (char *) malloc(sizeof(char));
         status = (char *) malloc(sizeof(char));
         if (getconn(fromtermKey, ipMsg, status) > 0)
         {
@@ -94,8 +94,7 @@ void auto_reg_run(){
             memset(truesql, 0, 200);
             sprintf(truesql, "select ID from MachineID where IP='%s'", ipMsg);
             log(logname, loglen, truesql, strlen(truesql));
-            sprintf(sql, "%s0000000001%010d%s", sqlid, strlen(truesql),
-                    truesql);
+            sprintf(sql, "%s0000000001%010d%s", sqlid, strlen(truesql),truesql);
             log(logname, loglen, sql, strlen(sql));
             sendtodb(sql, todbKey); /*将sql字符数组发送到数据库队列 */
             memset(sqlRes, 0, 512);
@@ -116,7 +115,7 @@ void auto_reg_run(){
             if ((atoi(selectid)) == 0) /*没有查询到该ip地址的id*/
             {
                 /*给机器依次分配机器号*/
-                /* 查询数据库中机器编号的max值*/
+                /*查询数据库中机器编号的max值*/
                 memset(sqlid2, 0, 11);
                 rcvfrommsgq(sqlidKey, 0, sqlRes);
                 for (i = 0; i < 10; i++)

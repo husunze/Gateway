@@ -17,6 +17,7 @@ void rcvfrommsgq(key_t key, long type, char* sqlRes)
     struct mymsg pmsg;
 
     mykey = key;
+
     if ((qid = msgget(key, IPC_CREAT | 0666)) < 0)
     {
         perror("msgget error!");
